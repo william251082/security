@@ -37,6 +37,11 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $twitterUserName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -125,5 +130,27 @@ class User implements UserInterface
         $this->password = $password;
 
         return $this;
+    }
+
+    public function getTwitterUserName(): ?string
+    {
+        return $this->twitterUserName;
+    }
+
+    public function setTwitterUserName(?string $twitterUserName): self
+    {
+        $this->twitterUserName = $twitterUserName;
+
+        return $this;
+    }
+
+    public function getAvatarUrl(int $size = null): string
+    {
+        $url = 'https://robohash.org/'.$this->getEmail();
+
+        if ($size) {
+            $url .= sprintf('?size=%dx%d', $size, $size);
+        }
+        return $url;
     }
 }
