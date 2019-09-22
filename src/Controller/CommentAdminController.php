@@ -12,9 +12,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 /**
  * Class CommentAdminController
  * @package App\Controller
- * @IsGranted("ROLE_ADMIN")
+ * @IsGranted("ROLE_ADMIN_COMMENT")
  */
-class CommentAdminController extends Controller
+class CommentAdminController extends BaseController
 {
     /**
      * @Route("/admin/comment", name="comment_admin")
