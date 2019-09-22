@@ -8,6 +8,7 @@
         "knplabs/knp-paginator-bundle": "^2.7",
         "knplabs/knp-time-bundle": "^1.8",
         "liip/imagine-bundle": "^2.1",
+        "nexylan/slack-bundle": "^2.2",
         "oneup/flysystem-bundle": "^3.1",
         "php-http/guzzle6-adapter": "^1.1",
         "php-http/httplug-bundle": "^1.16",
@@ -25,8 +26,7 @@
         "symfony/validator": "^4.0",
         "symfony/web-server-bundle": "^4.0",
         "symfony/yaml": "^4.0",
-        "twig/extensions": "^1.5",
-        "nexylan/slack-bundle": "^2.2"
+        "twig/extensions": "^1.5"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.0",
