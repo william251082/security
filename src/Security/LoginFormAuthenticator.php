@@ -38,7 +38,6 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             'password' => $request->request->get('password')
         ];
 
-        // on username can't be found, prefill the input field with previously written username
         $request->getSession()->set(
             Security::LAST_USERNAME,
             $credentials['email']
