@@ -34,8 +34,8 @@ class ArticleAdminController extends BaseController
      */
     public function edit(Article $article)
     {
-        // Never duplicate security logic, make this reusable -- solution: voters
-        if ($article->getAuthor() != $this->getUser() && !$this->isGranted('ROLE_ADMIN_ARTICLE')) {
+        // voter MANAGE = ROLE_*, permission attribute; other voter = IS_*
+        if (!$this->isGranted('MANAGE', $article)) {
             throw $this->createAccessDeniedException('No access!');
         }
 
